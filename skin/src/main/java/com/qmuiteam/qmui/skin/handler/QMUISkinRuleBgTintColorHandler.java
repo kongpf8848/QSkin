@@ -16,11 +16,14 @@
 package com.qmuiteam.qmui.skin.handler;
 
 import android.content.res.ColorStateList;
+import android.os.Build;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.core.view.TintableBackgroundView;
 
 import com.qmuiteam.qmui.skin.QMUISkinHelper;
+import com.qmuiteam.qmui.util.QMUIResHelper;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -31,7 +34,12 @@ public class QMUISkinRuleBgTintColorHandler extends QMUISkinRuleColorStateListHa
         if (view instanceof TintableBackgroundView) {
             ((TintableBackgroundView) view).setSupportBackgroundTintList(colorStateList);
         }else{
-            QMUISkinHelper.warnRuleNotSupport(view, name);
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+                view.setBackgroundTintList(colorStateList);
+            }
+            else {
+                QMUISkinHelper.warnRuleNotSupport(view, name);
+            }
         }
     }
 }

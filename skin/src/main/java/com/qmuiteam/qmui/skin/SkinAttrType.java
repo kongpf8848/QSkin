@@ -4,7 +4,11 @@ public enum SkinAttrType
 {
     BACKGROUD("background"),
     TEXTCOLOR("textColor"),
-    TINT("tint");
+    SRC("src"),
+    TINT("tint"),
+    BACKGROUNDTINT("backgroundTint"),
+    TEXTCOLORHINT("textColorHint");
+
     String attrType;
     SkinAttrType(String attrType)
     {

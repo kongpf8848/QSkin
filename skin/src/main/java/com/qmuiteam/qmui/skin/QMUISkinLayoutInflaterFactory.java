@@ -140,8 +140,18 @@ public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
                 }
                 else if(attrType==SkinAttrType.TEXTCOLOR){
                     builder.textColor(id);
-                } else if (attrType == SkinAttrType.TINT) {
+                } else if (attrType == SkinAttrType.SRC) {
+                    builder.src(id);
+                }
+                else if (attrType == SkinAttrType.TINT) {
                     builder.tintColor(id);
+                }
+                else if (attrType == SkinAttrType.BACKGROUNDTINT) {
+                    builder.bgTintColor(id);
+                }
+                else if(attrType==SkinAttrType.TEXTCOLORHINT)
+                {
+                    builder.hintColor(id);
                 }
             }
         }

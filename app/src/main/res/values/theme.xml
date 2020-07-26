@@ -18,8 +18,10 @@
     <!-- skin attr define-->
     <attr name="app_skin_common_background" format="color|reference" />
     <attr name="app_skin_common_text_color" format="color|reference" />
+    <attr name="app_skin_common_hint_text_color" format="color|reference" />
     <attr name="app_skin_common_img_tint_color" format="color|reference" />
     <attr name="app_skin_common_img_tint_color2" format="color|reference" />
+    <attr name="app_skin_common_img_drawable" format="integer|reference" />
 
     <attr name="bottomBarStyle" format="reference" />
     <attr name="textColorStyle" format="reference" />
@@ -28,6 +30,7 @@
     <style name="app_skin_white" parent="AppTheme">
         <item name="app_skin_common_background">@color/white</item>
         <item name="app_skin_common_text_color">@color/black</item>
+        <item name="app_skin_common_hint_text_color">#999999</item>
         <item name="app_skin_common_img_tint_color">@color/black</item>
         <item name="app_skin_common_img_tint_color2">#FF00FFFF</item>
         <item name="textColorStyle">@style/textColorStyle_light</item>
@@ -38,6 +41,7 @@
     <style name="app_skin_dark" parent="AppTheme">
         <item name="app_skin_common_background">@color/black</item>
         <item name="app_skin_common_text_color">@color/white</item>
+        <item name="app_skin_common_hint_text_color">#3dffffff</item>
         <item name="app_skin_common_img_tint_color">@color/red</item>
         <item name="app_skin_common_img_tint_color2">#FFFFFF00</item>
         <item name="textColorStyle">@style/textColorStyle_dark</item>

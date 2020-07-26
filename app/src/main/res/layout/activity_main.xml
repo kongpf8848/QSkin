@@ -33,6 +33,14 @@
         android:textColor="?attr/app_skin_common_text_color"
         />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/app_skin_common_text_color"
+        android:textColorHint="?attr/app_skin_common_hint_text_color"
+        android:hint="请输入文字..."
+        />
+
 
 </LinearLayout>
     <LinearLayout
