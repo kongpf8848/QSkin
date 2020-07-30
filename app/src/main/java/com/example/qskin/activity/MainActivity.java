@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 import com.example.qskin.QDPreferenceManager;
 import com.example.qskin.R;
+import com.example.qskin.view.RippleAnimation;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -24,7 +25,9 @@ public class MainActivity extends ThemeActivity {
 
     @OnClick(R.id.button1)
     public void onButton1(View view) {
+        RippleAnimation.create(view).setDuration(1000).start();
         QDPreferenceManager.getInstance(this).toogleTheme();
+
     }
 
     @OnClick(R.id.button2)

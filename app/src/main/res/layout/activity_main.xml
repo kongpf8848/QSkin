@@ -16,8 +16,9 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="120dp"
         android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:text="切换主题"
         android:textColor="?attr/app_skin_common_text_color"
@@ -33,13 +34,6 @@
         android:textColor="?attr/app_skin_common_text_color"
         />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="?attr/app_skin_common_text_color"
-        android:textColorHint="?attr/app_skin_common_hint_text_color"
-        android:hint="请输入文字..."
-        />
 
 
 </LinearLayout>
