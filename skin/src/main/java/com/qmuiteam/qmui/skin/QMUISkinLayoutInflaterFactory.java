@@ -21,12 +21,14 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.qmuiteam.qmui.QMUILog;
 import com.qmuiteam.qmui.util.QMUILangHelper;
@@ -35,7 +37,7 @@ import java.lang.ref.WeakReference;
 import java.util.HashMap;
 
 public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
-    private static final String TAG = "QMUISkin";
+    private static final String TAG = "QMUISkinLayoutInflate";
     private static final String[] sClassPrefixList = {
             "android.widget.",
             "android.webkit.",
@@ -119,12 +121,12 @@ public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
         for (int i = 0; i < attrs.getAttributeCount(); i++) {
             String attrName = attrs.getAttributeName(i);
             String attrValue = attrs.getAttributeValue(i);
+            QMUILog.d(TAG,"name="+attrName+",attr="+attrValue);
             if (TextUtils.isEmpty(attrName)) {
                 continue;
             }
             SkinAttrType attrType = SkinAttrType.getSupprotAttrType(attrName);
             if (attrType == null) continue;
-            QMUILog.d(TAG,"name="+attrName+",attr="+attrValue);
             if (attrValue.startsWith("@") || attrValue.startsWith("?")) {
                 attrValue = attrValue.substring(1);
             }
@@ -149,9 +151,20 @@ public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
                 else if (attrType == SkinAttrType.BACKGROUNDTINT) {
                     builder.bgTintColor(id);
                 }
-                else if(attrType==SkinAttrType.TEXTCOLORHINT)
+                else if(attrType==SkinAttrType.DRAWABLETINT)
                 {
-                    builder.hintColor(id);
+                    builder.textCompoundTintColor(id);
+                }
+                else if(attrType==SkinAttrType.STYLE){
+                    int[]aa=R.styleable.QMUISkinDef;
+                    TypedArray a = mEmptyTheme.obtainStyledAttributes(attrs, new int[]{id}, 0, 0);
+                    if(a!=null){
+                        int xx=a.getIndexCount();
+                        if(xx>0){
+                            Log.d(TAG, "+++++++xx:"+xx);
+                        }
+                    }
+                    //builder.textCompoundLeftSrc(id);
                 }
             }
         }

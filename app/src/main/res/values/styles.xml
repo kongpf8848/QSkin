@@ -10,15 +10,17 @@
 
     <style name="bottomBarStyle_light">
         <item name="android:tint">@color/selector_bottombar_style_light</item>
+        <item name="android:textColor">@color/selector_bottombar_style_light</item>
     </style>
     <style name="bottomBarStyle_dark">
         <item name="android:tint">@color/selector_bottombar_style_dark</item>
+        <item name="android:textColor">@color/selector_bottombar_style_dark</item>
     </style>
 
-    <style name="textColorStyle_light">
-        <item name="android:textColor">@color/selector_bottombar_style_light</item>
+    <style name="textStyle_light">
+        <item name="android:drawableStart">@drawable/chat_bottom_avastar_0</item>
     </style>
-    <style name="textColorStyle_dark">
-        <item name="android:textColor">@color/selector_bottombar_style_dark</item>
+    <style name="textStyle_dark">
+        <item name="android:drawableStart">@drawable/chat_bottom_settings_0</item>
     </style>
 </resources>
