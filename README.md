@@ -1,6 +1,10 @@
 # QSkin
 基于[QMUI 2.0](https://github.com/Tencent/QMUI_Android)开发的切换亮色暗色模式的类库
 
+# 截图
+# 部分截图
+![image](https://github.com/kongpf8848/QSkin/blob/master/11.gif)
+
 # 功能特点
 - 将QMUI中的换肤功能从QMUI类库中独立出来，形成单独的换肤类库
 - 优化换肤功能，不需要用户额外定义属性，而是使用系统原有的属性，使用更符合我们平时编码习惯，
