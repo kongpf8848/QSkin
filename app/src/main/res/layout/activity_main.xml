@@ -34,15 +34,6 @@
         android:textColor="?attr/app_skin_common_text_color"
         />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我是TextView"
-        android:textColor="?attr/app_skin_common_text_color"
-        style="?app_skin_textStyle"
-        />
-
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

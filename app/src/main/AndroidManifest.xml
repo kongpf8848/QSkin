@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/app_skin_white">
-        <activity android:name="com.example.qskin.activity.MainActivity"
+        <activity android:name="com.example.qskin.activity.SplashActivity"
             android:launchMode="singleTask"
             >
             <intent-filter>
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name="com.example.qskin.activity.MainActivity" android:screenOrientation="portrait" />
         <activity android:name="com.example.qskin.activity.TestActivity" android:screenOrientation="portrait" />
 
     </application>
