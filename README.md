@@ -2,7 +2,7 @@
 基于[QMUI 2.0](https://github.com/Tencent/QMUI_Android)开发的切换亮色暗色模式的类库
 
 # 截图
-![image](https://github.com/kongpf8848/QSkin/blob/master/11.gif)
+![image](https://github.com/kongpf8848/QSkin/blob/master/demo.gif)
 
 # 功能特点
 - 将QMUI中的换肤功能从QMUI类库中独立出来，形成单独的换肤类库
