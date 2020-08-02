@@ -8,9 +8,9 @@
 - 将QMUI中的换肤功能从QMUI类库中独立出来，形成单独的换肤类库
 - 优化换肤功能，不需要用户额外定义属性，而是使用系统原有的属性，使用更符合我们平时编码习惯，
   如需要更换文本颜色，在QMUI中需要如下定义：
- ```xml
+  ```xml
   app:qmui_skin_text_color="?attr/app_skin_common_title_text_color" />
- ```
+  ```
   现在定义的格式如下：
   ```xml
   android:textColor="?attr/app_skin_common_title_text_color" />
