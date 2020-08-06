@@ -39,7 +39,7 @@ public class ThemeActivity extends BaseActivity {
             LayoutInflaterCompat.setFactory2(layoutInflater, new QMUISkinLayoutInflaterFactory(this, layoutInflater));
         }
         if(QDPreferenceManager.getInstance(this).isWhiteTheme()){
-            setTheme(R.style.app_skin_white);
+            setTheme(R.style.app_skin_light);
         }
         else{
             setTheme(R.style.app_skin_dark);

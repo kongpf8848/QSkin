@@ -8,6 +8,20 @@
    >
 
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bind_google_verify_tool"
+        style="?attr/MyToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="50dp"
+        android:clickable="false"
+        app:title="Test"
+        app:contentInsetStart="20dp"
+       >
+
+
+    </androidx.appcompat.widget.Toolbar>
+
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"

@@ -17,6 +17,8 @@ buildscript {
     }
 }
 
+group 'androix.appcompat'
+
 allprojects {
     repositories {
         google()

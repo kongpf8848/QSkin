@@ -62,7 +62,7 @@ public class MyApplication extends Application {
 
     public void initSkin(Context context) {
         QMUISkinManager skinManager = QMUISkinManager.defaultInstance(context);
-        skinManager.addSkin(QDPreferenceManager.SKIN_WHITE, R.style.app_skin_white);
+        skinManager.addSkin(QDPreferenceManager.SKIN_LIGHT, R.style.app_skin_light);
         skinManager.addSkin(QDPreferenceManager.SKIN_DARK, R.style.app_skin_dark);
         int storeSkinIndex = QDPreferenceManager.getInstance(context).getSkinIndex();
         skinManager.changeSkin(storeSkinIndex);
@@ -72,10 +72,10 @@ public class MyApplication extends Application {
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         int theme=QDPreferenceManager.getInstance(getContext()).getSkinIndex();
-        if ((newConfig.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES && theme==QDPreferenceManager.SKIN_WHITE) {
+        if ((newConfig.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES && theme==QDPreferenceManager.SKIN_LIGHT) {
             QDPreferenceManager.getInstance(getContext()).setSkinIndex(QDPreferenceManager.SKIN_DARK);
         } else if (theme== QDPreferenceManager.SKIN_DARK) {
-            QDPreferenceManager.getInstance(getContext()).setSkinIndex(QDPreferenceManager.SKIN_WHITE);
+            QDPreferenceManager.getInstance(getContext()).setSkinIndex(QDPreferenceManager.SKIN_LIGHT);
         }
     }
 }

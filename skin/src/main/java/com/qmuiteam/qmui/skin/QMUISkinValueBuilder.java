@@ -43,6 +43,7 @@ public class QMUISkinValueBuilder {
     public static final String UNDERLINE = "underline";
     public static final String MORE_TEXT_COLOR = "moreTextColor";
     public static final String MORE_BG_COLOR = "moreBgColor";
+    public static final String STYLE = "style";
     private static LinkedList<QMUISkinValueBuilder> sValueBuilderPool;
 
     public static QMUISkinValueBuilder acquire() {
@@ -301,6 +302,12 @@ public class QMUISkinValueBuilder {
         mValues.put(name, attrName);
         return this;
     }
+
+    public QMUISkinValueBuilder style(int attr) {
+        mValues.put(STYLE, String.valueOf(attr));
+        return this;
+    }
+
 
     public QMUISkinValueBuilder clear() {
         mValues.clear();

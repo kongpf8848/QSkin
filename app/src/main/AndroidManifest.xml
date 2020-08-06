@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
-        android:theme="@style/app_skin_white">
+        android:theme="@style/app_skin_light">
         <activity android:name="com.example.qskin.activity.SplashActivity"
             android:launchMode="singleTask"
             >

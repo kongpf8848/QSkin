@@ -6,7 +6,6 @@ public enum SkinAttrType
     TEXTCOLOR("textColor"),
     SRC("src"),
     TINT("tint"),
-    STYLE("style"),
     BACKGROUNDTINT("backgroundTint"),
     TEXTCOLORHINT("textColorHint"),
     DRAWABLETINT("drawableTint"),
@@ -15,7 +14,8 @@ public enum SkinAttrType
     DRAWABLEEND("drawableEnd"),
     DRAWABLERIGHT("drawableRight"),
     DRAWABLETOP("drawableTop"),
-    DRAWABLEBOTTOM("drawableBottom");
+    DRAWABLEBOTTOM("drawableBottom"),
+    STYLE("style");
 
     String attrType;
     SkinAttrType(String attrType)

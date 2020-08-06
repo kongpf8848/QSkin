@@ -30,7 +30,7 @@ public class QDPreferenceManager {
     private static SharedPreferences sPreferences;
     private static QDPreferenceManager sQDPreferenceManager = null;
 
-    public static final int SKIN_WHITE=1;
+    public static final int SKIN_LIGHT =1;
     public static final int SKIN_DARK=2;
 
 
@@ -55,7 +55,7 @@ public class QDPreferenceManager {
     }
 
     public int getSkinIndex() {
-        return sPreferences.getInt(APP_SKIN_INDEX, SKIN_WHITE);
+        return sPreferences.getInt(APP_SKIN_INDEX, SKIN_LIGHT);
     }
 
     public boolean isDarkTheme(){
@@ -63,15 +63,15 @@ public class QDPreferenceManager {
     }
 
     public boolean isWhiteTheme(){
-        return getSkinIndex()==SKIN_WHITE;
+        return getSkinIndex()== SKIN_LIGHT;
     }
 
     public void toogleTheme(){
          if(getSkinIndex()==SKIN_DARK){
-             setSkinIndex(SKIN_WHITE);
-             QMUISkinManager.defaultInstance(MyApplication.getContext()).changeSkin(SKIN_WHITE);
+             setSkinIndex(SKIN_LIGHT);
+             QMUISkinManager.defaultInstance(MyApplication.getContext()).changeSkin(SKIN_LIGHT);
          }
-         else if(getSkinIndex()==SKIN_WHITE){
+         else if(getSkinIndex()== SKIN_LIGHT){
              setSkinIndex(SKIN_DARK);
              QMUISkinManager.defaultInstance(MyApplication.getContext()).changeSkin(SKIN_DARK);
          }

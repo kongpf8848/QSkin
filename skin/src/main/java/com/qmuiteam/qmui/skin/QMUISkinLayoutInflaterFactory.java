@@ -136,8 +136,9 @@ public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
                 continue;
             }
             String entryName = context.getResources().getResourceEntryName(id);
-            QMUILog.d(TAG,"entryName="+entryName+",id="+id);
-            if (!TextUtils.isEmpty(entryName) && entryName.startsWith(ATTR_PREFIX)) {
+            String type=context.getResources().getResourceTypeName(id);
+            QMUILog.d(TAG,"entryName="+entryName+",id="+id+",type:"+type);
+            if (!TextUtils.isEmpty(entryName) && "attr".equals(type)) {
                 if (attrType==SkinAttrType.BACKGROUD) {
                     builder.background(id);
                 }
@@ -167,6 +168,9 @@ public class QMUISkinLayoutInflaterFactory implements LayoutInflater.Factory2 {
                 }
                 else if(attrType==SkinAttrType.DRAWABLEBOTTOM){
                     builder.textCompoundBottomSrc(id);
+                }
+                else if(attrType==SkinAttrType.STYLE){
+                    builder.style(id);
                 }
             }
         }

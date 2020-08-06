@@ -26,9 +26,11 @@
     <attr name="bottomBarStyle" format="reference" />
     <attr name="app_skin_textStyle" format="reference" />
 
+    <attr name="MyToolbarStyle" format="reference" />
+
 
     <!-- white skin -->
-    <style name="app_skin_white" parent="AppTheme">
+    <style name="app_skin_light" parent="AppTheme">
         <item name="app_skin_common_background">@color/white</item>
         <item name="app_skin_common_text_color">@color/black</item>
         <item name="app_skin_common_hint_text_color">#999999</item>
@@ -36,6 +38,8 @@
         <item name="app_skin_common_img_tint_color2">#FF00FFFF</item>
         <item name="app_skin_textStyle">@style/textStyle_light</item>
         <item name="bottomBarStyle">@style/bottomBarStyle_light</item>
+
+        <item name="MyToolbarStyle">@style/my_toolbar_light</item>
     </style>
 
     <!-- dark skin -->
@@ -47,6 +51,8 @@
         <item name="app_skin_common_img_tint_color2">#FFFFFF00</item>
         <item name="app_skin_textStyle">@style/textStyle_dark</item>
         <item name="bottomBarStyle">@style/bottomBarStyle_dark</item>
+
+        <item name="MyToolbarStyle">@style/my_toolbar_dark</item>
     </style>
 
 

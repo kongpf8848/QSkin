@@ -53,6 +53,7 @@ import com.qmuiteam.qmui.skin.handler.QMUISkinRuleMoreTextColorHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleProgressColorHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleSeparatorHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleSrcHandler;
+import com.qmuiteam.qmui.skin.handler.QMUISkinRuleStyleHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleTextColorHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleTextCompoundSrcHandler;
 import com.qmuiteam.qmui.skin.handler.QMUISkinRuleTextCompoundTintColorHandler;
@@ -155,6 +156,7 @@ public final class QMUISkinManager {
         sRuleHandlers.put(QMUISkinValueBuilder.UNDERLINE, new QMUISkinRuleUnderlineHandler());
         sRuleHandlers.put(QMUISkinValueBuilder.MORE_TEXT_COLOR, new QMUISkinRuleMoreTextColorHandler());
         sRuleHandlers.put(QMUISkinValueBuilder.MORE_BG_COLOR, new QMUISkinRuleMoreBgColorHandler());
+        sRuleHandlers.put(QMUISkinValueBuilder.STYLE, new QMUISkinRuleStyleHandler());
     }
 
     public static void setRuleHandler(String name, IQMUISkinRuleHandler handler){
@@ -398,7 +400,7 @@ public final class QMUISkinManager {
         }
         IQMUISkinRuleHandler handler = sRuleHandlers.get(name);
         if (handler == null) {
-            QMUILog.w(TAG, "Do not find handler for skin attr name: " + name);
+            QMUILog.w(TAG, "QMUI_ERROR,Do not find handler for skin attr name: " + name);
             return;
         }
         QMUILog.d(TAG, "defaultHandleSkinAttr() called with: view = [" + view + "], handler = [" + handler + "], name = [" + name + "], attr = [" + attr + "]");
