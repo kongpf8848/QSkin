@@ -5,6 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
@@ -12,6 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 import com.qmuiteam.qmui.QMUILog;
 import com.qmuiteam.qmui.skin.QMUISkinManager;
 import com.qmuiteam.qmui.skin.R;
+import com.qmuiteam.qmui.skin.style.IStyleHandler;
+import com.qmuiteam.qmui.skin.style.QMUISkinRuleImageViewStyleHandler;
+import com.qmuiteam.qmui.skin.style.QMUISkinRuleTextViewStyleHandler;
 import com.qmuiteam.qmui.skin.style.QMUISkinRuleToolbarStyleHandler;
 import com.qmuiteam.qmui.skin.style.TintTypedArray;
 
@@ -36,8 +41,19 @@ public class QMUISkinRuleStyleHandler implements IQMUISkinRuleHandler {
         }
         ta.recycle();
 
+        IStyleHandler styleHandler=null;
+
         if(view instanceof Toolbar){
-            new QMUISkinRuleToolbarStyleHandler().handle(view,resId);
+            styleHandler=new QMUISkinRuleToolbarStyleHandler();
+        }
+        else if(view instanceof TextView){
+            styleHandler=new QMUISkinRuleTextViewStyleHandler();
+        }
+        else if(view instanceof ImageView){
+            styleHandler=new QMUISkinRuleImageViewStyleHandler();
+        }
+        if(styleHandler!=null){
+            styleHandler.handle(view,resId);
         }
      }
 }

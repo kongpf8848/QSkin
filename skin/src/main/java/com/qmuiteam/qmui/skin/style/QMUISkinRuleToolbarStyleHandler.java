@@ -6,8 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
-public class QMUISkinRuleToolbarStyleHandler{
+public class QMUISkinRuleToolbarStyleHandler implements IStyleHandler{
 
+    @Override
     public void handle( @NonNull View view,int resId) {
 
         Toolbar toolbar=(Toolbar)view;

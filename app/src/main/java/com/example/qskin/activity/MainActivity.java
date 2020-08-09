@@ -4,17 +4,23 @@ package com.example.qskin.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
 import com.example.qskin.QDPreferenceManager;
 import com.example.qskin.R;
+import com.example.qskin.util.ThemeUtil;
 import com.example.qskin.view.RippleAnimation;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends ThemeActivity {
+
+    @BindView(R.id.button1)
+    Button button1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,7 +38,7 @@ public class MainActivity extends ThemeActivity {
 
     @OnClick(R.id.button2)
     public void onButton2(View view) {
-        startActivity(new Intent(this,TestActivity.class));
+       startActivity(new Intent(this,TestActivity.class));
     }
 
 

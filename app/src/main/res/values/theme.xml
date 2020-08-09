@@ -23,8 +23,8 @@
     <attr name="app_skin_common_img_tint_color2" format="color|reference" />
     <attr name="app_skin_common_img_drawable" format="integer|reference" />
 
-    <attr name="bottomBarStyle" format="reference" />
-    <attr name="app_skin_textStyle" format="reference" />
+    <attr name="app_skin_bottombar_imageStyle" format="reference" />
+    <attr name="app_skin_bottombar_textStyle" format="reference" />
 
     <attr name="MyToolbarStyle" format="reference" />
 
@@ -36,8 +36,8 @@
         <item name="app_skin_common_hint_text_color">#999999</item>
         <item name="app_skin_common_img_tint_color">@color/black</item>
         <item name="app_skin_common_img_tint_color2">#FF00FFFF</item>
-        <item name="app_skin_textStyle">@style/textStyle_light</item>
-        <item name="bottomBarStyle">@style/bottomBarStyle_light</item>
+        <item name="app_skin_bottombar_imageStyle">@style/imageStyle_light</item>
+        <item name="app_skin_bottombar_textStyle">@style/textStyle_light</item>
 
         <item name="MyToolbarStyle">@style/my_toolbar_light</item>
     </style>
@@ -49,9 +49,8 @@
         <item name="app_skin_common_hint_text_color">#3dffffff</item>
         <item name="app_skin_common_img_tint_color">@color/red</item>
         <item name="app_skin_common_img_tint_color2">#FFFFFF00</item>
-        <item name="app_skin_textStyle">@style/textStyle_dark</item>
-        <item name="bottomBarStyle">@style/bottomBarStyle_dark</item>
-
+        <item name="app_skin_bottombar_imageStyle">@style/imageStyle_dark</item>
+        <item name="app_skin_bottombar_textStyle">@style/textStyle_dark</item>
         <item name="MyToolbarStyle">@style/my_toolbar_dark</item>
     </style>
 
